@@ -7,7 +7,7 @@ import UpdateBook from './pages/UpdateBook'
 import FindABook from './pages/FindABook'
 import DisplayAllBooks from './pages/DisplayAllBooks'
 
-function App() {
+export function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -19,5 +19,3 @@ function App() {
     </Routes>
   )
 }
-
-export default App
