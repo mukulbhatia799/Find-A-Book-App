@@ -9,7 +9,7 @@ router.post("/addbook", async (req, res) => {
     try {
         if(!req.body.title || !req.body.author || !req.body.publishedYear) {
             return res.status(400).send({
-                message: "Please giving full details of the book"
+                message: "Please give full details of the book"
             })
         }
         else {
