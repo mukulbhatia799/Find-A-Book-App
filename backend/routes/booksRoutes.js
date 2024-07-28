@@ -4,7 +4,7 @@ import { Book } from "../models/bookStore.js";
 const router = express.Router();
 
 // add new book to db
-// this route is /books/addbook. same as for other routes.
+// this route is /books/addbook. same as, other routes start with /books/....
 router.post("/addbook", async (req, res) => {
     try {
         if(!req.body.title || !req.body.author || !req.body.publishedYear) {
@@ -20,7 +20,8 @@ router.post("/addbook", async (req, res) => {
             };
             const book = await Book.create(createBook);
             return res.status(201).send({
-                message: "book added"
+                message: "book added",
+                book: book
             });
         }
     }catch(error) {
@@ -71,11 +72,11 @@ router.put("/updatebook/:id", async (req, res) => {
     const {id} = req.params;
     const updatedBook = req.body;
     const book = await Book.findByIdAndUpdate(id, updatedBook);
-    const checkUpdated = await Book.findById(id);
 
     return res.status(201).send({
         message: "book details updated",
-        updatedBookDetails: checkUpdated
+        // updatedBookDetails: checkUpdated,
+        updatedBookDetails: book
     })
 })
 
