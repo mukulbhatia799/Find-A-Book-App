@@ -6,8 +6,8 @@ import { BsInfoCircle } from 'react-icons/bs';
 import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 
 export default function DisplayAllBooks({books, setBooks}) {
-  console.log("books.length: ", books.length, books);
-  console.log("displaying books");
+  // console.log("books.length: ", books.length, books);
+  // console.log("displaying books");
   useEffect(() => {
     axios
       .get("http://localhost:5555/books/getbooks")
@@ -49,7 +49,7 @@ export default function DisplayAllBooks({books, setBooks}) {
                   <td className="border border-slate-700 rounded-md text-center">
                     {index + 1}
                   </td>
-                  <td className="border border-slate-700 rounded-md text-center">
+                  <td className="border border-slate-700 rounded-md text-center truncate max-w-[100px]">
                     {book.title}
                   </td>
                   <td className="border border-slate-700 rounded-md text-center max-md:hidden">

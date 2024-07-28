@@ -6,6 +6,7 @@ import DeleteBook from "./pages/DeleteBook.jsx";
 import UpdateBook from "./pages/UpdateBook.jsx";
 import FindABook from "./pages/FindABook.jsx";
 import DisplayAllBooks from "./pages/DisplayAllBooks.jsx";
+import "./App.css";
 
 export default function App() {
   return (
