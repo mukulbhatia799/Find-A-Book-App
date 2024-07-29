@@ -75,8 +75,7 @@ router.put("/updatebook/:id", async (req, res) => {
 
     return res.status(201).send({
         message: "book details updated",
-        // updatedBookDetails: checkUpdated,
-        updatedBookDetails: book
+        book: book
     })
 })
 
