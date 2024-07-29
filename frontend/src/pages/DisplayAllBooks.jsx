@@ -47,7 +47,9 @@ export default function DisplayAllBooks({ books, setBooks }) {
               </thead>
             </table>
             <div className="w-full">
-              <h1 className="text-center font-bold py-3 mx-2 bg-[#6b6b57]">Empty</h1>
+              <h1 className="text-center font-bold py-3 mx-2 bg-[#6b6b57]">
+                Empty
+              </h1>
             </div>
           </>
         ) : (
