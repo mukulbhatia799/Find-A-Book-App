@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import BackButton from "../components/BackButton";
 
 export default function UpdateBook() {
   const { id } = useParams();
@@ -25,6 +26,11 @@ export default function UpdateBook() {
       <div className="flex flex-col justify-center items-center">
         <div className="rounded-lg lg:w-1/2 p-5 flex flex-col justify-center items-center bg-[#a39a76]">
           <div className="flex flex-col gap-4">
+            <button onClick={() => {
+              navigate("/");
+            }}>
+              <BackButton />
+            </button>
             <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
               <label className="font-bold">Title: </label>
               <input
