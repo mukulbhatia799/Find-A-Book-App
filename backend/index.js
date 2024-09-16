@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 })
 
 app.use("/books", booksRoutes);     // as there can be so many databases and for each databases there can be so many routes, so it is avoided to put all routes in index.js. Best practice is to create different files where each databases routes are created.
-    
+
 mongoose
     .connect(mongodbURL)
     .then(() => {
