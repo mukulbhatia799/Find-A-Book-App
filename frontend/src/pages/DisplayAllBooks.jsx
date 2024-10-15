@@ -10,7 +10,7 @@ export default function DisplayAllBooks({ books, setBooks }) {
   // console.log("displaying books");
   useEffect(() => {
     axios
-      .get("http://localhost:5555/books/getbooks")
+      .get("https://find-a-book-app-backend.onrender.com/books/getbooks")
       .then((res) => {
         console.log("displaying books in displayallbooks: ", books);
         setBooks(res.data.books);

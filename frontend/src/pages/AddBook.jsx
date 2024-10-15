@@ -46,11 +46,12 @@ export default function AddBook({ books, setBooks }) {
                 publishedYear,
               };
               axios
-                .post("http://localhost:5555/books/addbook", newBook)
+                .post("https://find-a-book-app-backend.onrender.com/books/addbook", newBook)
                 .then((res) => {
                   setBooks([...books, res.data.book]);
                 })
                 .catch((err) => {
+                  console.log("error: ", err);
                   alert("error: ", err);
                 });
               setTitle(() => "");
