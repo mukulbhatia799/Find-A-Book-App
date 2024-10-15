@@ -11,7 +11,7 @@ export default function DeleteBook() {
   useEffect(() => {
     setLoading(true);
     axios
-      .delete(`https://find-a-book-app-backend.onrender.com//books/deletebook/${id}`)
+      .delete(`https://find-a-book-app-backend.onrender.com/books/deletebook/${id}`)
       .then((res) => {
         setLoading(false);
         console.log(res);

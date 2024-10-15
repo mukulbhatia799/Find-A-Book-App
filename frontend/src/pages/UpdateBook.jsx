@@ -87,7 +87,7 @@ export default function UpdateBook() {
                   console.log("onclick booktoupdate: ", bookToUpdate);
                   axios
                     .put(
-                      `http://localhost:5555/books/updatebook/${id}`,
+                      `https://find-a-book-app-backend.onrender.com/books/updatebook/${id}`,
                       bookToUpdate
                     )
                     .then((res) => {
