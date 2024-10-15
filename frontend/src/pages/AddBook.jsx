@@ -36,7 +36,7 @@ export default function AddBook({ books, setBooks }) {
             />
           </div>  
           <button
-            onClick={() => {
+            onClick={async () => {
               if (!title || !author || !publishedYear) {
                 return alert("input data is empty!");
               }
@@ -45,7 +45,7 @@ export default function AddBook({ books, setBooks }) {
                 author,
                 publishedYear,
               };
-              axios
+              await axios
                 .post("https://find-a-book-app-backend.onrender.com/books/addbook", newBook)
                 .then((res) => {
                   setBooks([...books, res.data.book]);
