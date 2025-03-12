@@ -34,8 +34,8 @@ Find a Book is a MERN stack application that allows users to manage a collection
 
 4. Set up environment variables:  
    - Create a `.env` file in the backend folder and configure necessary environment variables:
-   - - PORT=portNo
-   - - PORT=YourMongoDB_URL
+   - PORT=portNo
+   - MONGO_URI=YourMongoDB_URL
 
 5. Start the backend server:  
    ```sh  
