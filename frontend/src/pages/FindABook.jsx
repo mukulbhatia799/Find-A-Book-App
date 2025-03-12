@@ -10,7 +10,8 @@ export default function FindABook() {
 
   useEffect(() => {
     axios
-      .get(`https://find-a-book-app-backend.onrender.com/books/findabook/${id}`)
+      // .get(`https://find-a-book-app-backend.onrender.com/books/findabook/${id}`)
+      .get(`http://localhost:5555/books/findabook/${id}`)
       .then((res) => {
         console.log("res: ", res);
         setBookData(res.data);
@@ -18,7 +19,7 @@ export default function FindABook() {
       .catch((err) => {
         console.log("error occured! ", err);
       });
-  }, []);
+  }, []); // empty [] means only runs first time.
 
   return (
     <div>

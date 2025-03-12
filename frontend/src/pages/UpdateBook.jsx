@@ -10,7 +10,7 @@ export default function UpdateBook() {
   let auxBookData = bookToUpdate;
   useEffect(() => {
     axios
-      .put(`https://find-a-book-app-backend.onrender.com/books/updatebook/${id}`)
+      .put(`http://localhost:5555/books/updatebook/${id}`)
       .then((res) => {
         console.log("res: ", res.data.book);
         auxBookData = res.data.book;
@@ -87,7 +87,7 @@ export default function UpdateBook() {
                   console.log("onclick booktoupdate: ", bookToUpdate);
                   axios
                     .put(
-                      `https://find-a-book-app-backend.onrender.com/books/updatebook/${id}`,
+                      `http://localhost:5555/books/updatebook/${id}`,
                       bookToUpdate
                     )
                     .then((res) => {

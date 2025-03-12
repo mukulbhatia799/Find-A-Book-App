@@ -11,7 +11,7 @@ export default function DeleteBook() {
   useEffect(() => {
     setLoading(true);
     axios
-      .delete(`https://find-a-book-app-backend.onrender.com/books/deletebook/${id}`)
+      .delete(`http://localhost:5555/books/deletebook/${id}`)
       .then((res) => {
         setLoading(false);
         console.log(res);
@@ -19,7 +19,7 @@ export default function DeleteBook() {
       })
       .catch((err) => {
         setLoading(false);
-        alert("error while deleting/fetching: ", err);
+        console.log("error while deleting/fetching: ", err);
         navigate("/");
       });
   }, []);
