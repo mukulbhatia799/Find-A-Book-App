@@ -1,6 +1,6 @@
 ## [Live Link](https://bookfinder-website.netlify.app/)
 
-# Find a Book  
+# Bookfinder Website  
 
 ## Description  
 Find a Book is a MERN stack application that allows users to manage a collection of books. Users can add books by providing a title, author, and published year. Additionally, users can edit, view, and delete book entries. The application also supports searching for books based on the book name, author, or published year.
