@@ -9,12 +9,9 @@ import DisplayBooksHeading from "../components/DisplayBooksHeading";
 import BookSearchAndDisplay from "../components/BookSearchAndDisplay";
 
 export default function DisplayAllBooks({ books, setBooks }) {
-  // console.log("books.length: ", books.length, books);
-  // console.log("displaying books");
   useEffect(() => {
     axios
-      // .get("https://find-a-book-app-backend.onrender.com/books/getbooks")
-      .get("http://localhost:5555/books/getbooks")
+      .get(`${import.meta.env.VITE_API_URL}/books/getbooks`)
       .then((res) => {
         console.log("displaying books in displayallbooks: ", res.data.books);
         setBooks(res.data.books);

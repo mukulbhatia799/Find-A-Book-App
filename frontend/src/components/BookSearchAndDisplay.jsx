@@ -6,10 +6,9 @@ export default function BookSearchAndDisplay({ books, setBooks }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5555/books/bulk?filter=${filter}`)
+      .get(`${import.meta.env.VITE_API_URL}/books/bulk?filter=${filter}`)
       .then((res) => {
         setBooks(res.data.book);
-        // console.log("book search result: ", res.data.book);
       });
   }, [filter]);
 

@@ -46,7 +46,7 @@ export default function AddBook({ books, setBooks }) {
                 publishedYear,
               };
               await axios
-                .post("http://localhost:5555/books/addbook", newBook)
+                .post(`${import.meta.env.VITE_API_URL}/books/addbook`, newBook)
                 .then((res) => {
                   setBooks([...books, res.data.book]);
                 })

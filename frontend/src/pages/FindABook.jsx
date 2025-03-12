@@ -10,8 +10,7 @@ export default function FindABook() {
 
   useEffect(() => {
     axios
-      // .get(`https://find-a-book-app-backend.onrender.com/books/findabook/${id}`)
-      .get(`http://localhost:5555/books/findabook/${id}`)
+      .get(`${import.meta.env.VITE_API_URL}/books/findabook/${id}`)
       .then((res) => {
         console.log("res: ", res);
         setBookData(res.data);

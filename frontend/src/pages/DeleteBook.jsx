@@ -11,7 +11,7 @@ export default function DeleteBook() {
   useEffect(() => {
     setLoading(true);
     axios
-      .delete(`http://localhost:5555/books/deletebook/${id}`)
+      .delete(`${import.meta.env.VITE_API_URL}/books/deletebook/${id}`)
       .then((res) => {
         setLoading(false);
         console.log(res);

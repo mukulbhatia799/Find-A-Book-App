@@ -10,7 +10,7 @@ export default function UpdateBook() {
   let auxBookData = bookToUpdate;
   useEffect(() => {
     axios
-      .put(`http://localhost:5555/books/updatebook/${id}`)
+      .put(`${import.meta.env.VITE_API_URL}/books/updatebook/${id}`)
       .then((res) => {
         console.log("res: ", res.data.book);
         auxBookData = res.data.book;
@@ -87,7 +87,7 @@ export default function UpdateBook() {
                   console.log("onclick booktoupdate: ", bookToUpdate);
                   axios
                     .put(
-                      `http://localhost:5555/books/updatebook/${id}`,
+                      `${import.meta.env.VITE_API_URL}/books/updatebook/${id}`,
                       bookToUpdate
                     )
                     .then((res) => {
