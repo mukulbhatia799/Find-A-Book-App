@@ -98,4 +98,38 @@ router.delete("/deletebook/:id", async (req, res) => {
     }
 })
 
+// used for searching the user in dashboard page. 
+router.get("/bulk", async (req, res) => {
+    const filter = req.query.filter || "";
+
+    const books = await Book.find({
+        $or: [{             // checks whether the input typed by user is either title or author or not. If filter is empty, return all books.
+            title: {
+                "$regex": filter,
+                "$options": "i"
+            }
+        }, {
+            author: {
+                "$regex": filter,
+                "$options": "i"
+            }
+        },
+        {
+            publishedYear: {
+                "$regex": filter,
+                "$options": "i"
+            }
+        }]
+    })
+
+    res.json({
+        book: books.map(book => ({
+            title: book.title,
+            author: book.author,
+            publishedYear: book.publishedYear,
+            _id: book._id
+        }))
+    })
+})
+
 export default router;
