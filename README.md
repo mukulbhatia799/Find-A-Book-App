@@ -33,7 +33,9 @@ Find a Book is a MERN stack application that allows users to manage a collection
    ```  
 
 4. Set up environment variables:  
-   - Create a `.env` file in the backend folder and configure necessary environment variables such as database URL, port, etc.
+   - Create a `.env` file in the backend folder and configure necessary environment variables:
+   - - PORT=portNo
+   - - PORT=YourMongoDB_URL
 
 5. Start the backend server:  
    ```sh  
@@ -43,7 +45,7 @@ Find a Book is a MERN stack application that allows users to manage a collection
 6. Start the frontend server:  
    ```sh  
    cd ../frontend  
-   npm start  
+   npm run dev  
    ```  
 
 ## Tech Stack  
